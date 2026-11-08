@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f5f8ff">
+<title>Abrir en navegador</title>
+<style>
+:root{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:#14223b;background:#eef2f8}*{box-sizing:border-box}body{margin:0}main{max-width:440px;min-height:100dvh;margin:auto;padding:calc(24px + env(safe-area-inset-top)) 20px calc(24px + env(safe-area-inset-bottom));background:linear-gradient(180deg,#fff,#f7faff);box-shadow:0 0 38px #182e5016}.top{display:flex;justify-content:space-between;align-items:center;gap:8px;color:#5e6980;font-size:12px;font-weight:700}.label{border:1px solid #d9e2f1;padding:8px 10px;border-radius:30px;background:#fff}.brand{font-size:13px;color:#1675ea}.hero{text-align:center;padding:25px 0 19px}.globe{display:grid;place-items:center;margin:auto auto 12px;width:62px;height:62px;border-radius:20px;background:linear-gradient(135deg,#228bff,#075acb);box-shadow:0 9px 24px #1971e650;color:white;font-size:32px}h1{font-size:27px;line-height:1.15;margin:0 0 10px;letter-spacing:-.7px}p{font-size:14px;line-height:1.5;color:#65728b;margin:0}.visual{overflow:hidden;background:#fff;border:1px solid #dce4ef;border-radius:22px;box-shadow:0 15px 40px #233a6118;position:relative;aspect-ratio:1/1;display:flex;justify-content:center;align-items:center}.visual img{width:100%;height:100%;object-fit:contain}.caption{position:absolute;top:13px;left:13px;border-radius:18px;background:#14223be6;color:white;font-size:10px;font-weight:800;padding:8px 11px}.fallback{display:none;flex-direction:column;align-items:center;gap:15px;color:#116de4;font-weight:800;padding:20px}.fallback .dots{font-size:58px;letter-spacing:9px}.fallback .arrow{font-size:45px;animation:move 1s ease-in-out infinite}@keyframes move{50%{transform:translateY(-8px)}}.steps{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin:15px 0}.step{display:flex;gap:10px;align-items:center;border-radius:15px;background:white;border:1px solid #e0e7f1;padding:13px 10px;min-height:76px}.num{background:#1078f5;color:white;border-radius:50%;width:29px;height:29px;flex:none;display:grid;place-items:center;font-size:13px;font-weight:800}.step b{display:block;font-size:12px}.step small{display:block;font-size:10px;margin-top:4px;color:#6f7b90}.btn{display:block;text-align:center;background:#147cf4;color:#fff;text-decoration:none;font-size:15px;font-weight:800;border-radius:15px;padding:16px 14px;box-shadow:0 8px 18px #147cf43b}.note{text-align:center;font-size:11px;margin-top:12px}.url{text-align:center;margin-top:14px;font-size:11px;color:#8b95a5;overflow-wrap:anywhere}.hidden{display:none!important}
+@media(max-width:355px){main{padding-left:13px;padding-right:13px}.steps{grid-template-columns:1fr}.hero{padding-top:18px}}
+@media(prefers-reduced-motion:reduce){.fallback .arrow{animation:none}}
+</style>
+</head>
+<body>
+<main>
+ <div class="top"><span class="brand">◉ <span data-t="guideName">Guía de navegación</span></span><span class="label" id="langTag">ES</span></div>
+ <section class="hero"><div class="globe" aria-hidden="true">◎</div><h1 data-t="title">Abrir en navegador</h1><p data-t="intro">Para continuar, abrí esta página en Safari, Chrome o tu navegador habitual.</p></section>
+ <section class="visual"><img id="demo" src="https://movilios.com/abrir-en-navegador.gif?v=4" alt="Guía animada para abrir la página en el navegador" loading="eager"><div class="fallback" id="fallback"><div class="arrow">↗</div><div class="dots">•••</div><span data-t="fallback">Tocá los tres puntos del menú</span></div><div class="caption" data-t="animated">GUÍA ANIMADA</div></section>
+ <section class="steps"><div class="step"><div class="num">1</div><div><b data-t="stepOne">Tocá •••</b><small data-t="stepOneSub">En el menú de la app</small></div></div><div class="step"><div class="num">2</div><div><b data-t="stepTwo">Abrir en navegador</b><small data-t="stepTwoSub">Seleccioná Safari o Chrome</small></div></div></section>
+ <a class="btn" id="openSite" href="https://hackisitos.tecnologiaempresarial.top/" rel="noopener" data-t="button">Continuar al sitio</a>
+ <p class="note" data-t="note">Si seguís dentro de la app, usá la opción «Abrir en navegador» del menú.</p>
+ <div class="url">hackisitos.tecnologiaempresarial.top</div>
+</main>
+<script>
+(function(){
+ 'use strict';
+ const dest='https://hackisitos.tecnologiaempresarial.top/';
+ const strings={
+  es:{guideName:'Guía de navegación',title:'Abrir en navegador',intro:'Para continuar, abrí esta página en Safari, Chrome o tu navegador habitual.',fallback:'Tocá los tres puntos del menú',animated:'GUÍA ANIMADA',stepOne:'Tocá •••',stepOneSub:'En el menú de la app',stepTwo:'Abrir en navegador',stepTwoSub:'Seleccioná Safari o Chrome',button:'Continuar al sitio',note:'Si seguís dentro de la app, usá la opción «Abrir en navegador» del menú.'},
+  en:{guideName:'Browser guide',title:'Open in browser',intro:'To continue, open this page in Safari, Chrome or your usual browser.',fallback:'Tap the three dots in the menu',animated:'ANIMATED GUIDE',stepOne:'Tap •••',stepOneSub:'In the app menu',stepTwo:'Open in browser',stepTwoSub:'Choose Safari or Chrome',button:'Continue to website',note:'If you are still inside the app, use the “Open in browser” option in its menu.'},
+  pt:{guideName:'Guia de navegação',title:'Abrir no navegador',intro:'Para continuar, abra esta página no Safari, Chrome ou no seu navegador habitual.',fallback:'Toque nos três pontos do menu',animated:'GUIA ANIMADO',stepOne:'Toque em •••',stepOneSub:'No menu do aplicativo',stepTwo:'Abrir no navegador',stepTwoSub:'Escolha Safari ou Chrome',button:'Continuar para o site',note:'Se ainda estiver dentro do aplicativo, use a opção “Abrir no navegador” no menu.'},
+  fr:{guideName:'Guide du navigateur',title:'Ouvrir dans le navigateur',intro:'Pour continuer, ouvrez cette page dans Safari, Chrome ou votre navigateur habituel.',fallback:'Touchez les trois points du menu',animated:'GUIDE ANIMÉ',stepOne:'Touchez •••',stepOneSub:'Dans le menu de l’application',stepTwo:'Ouvrir dans le navigateur',stepTwoSub:'Choisissez Safari ou Chrome',button:'Continuer vers le site',note:'Si vous êtes toujours dans l’application, utilisez « Ouvrir dans le navigateur » dans son menu.'}
+ };
+ const langs=navigator.languages||[navigator.language||'en'];
+ const lang=(langs.map(l=>String(l).toLowerCase().split('-')[0]).find(l=>strings[l])||'en');
+ const t=strings[lang];document.documentElement.lang=lang;document.getElementById('langTag').textContent=lang.toUpperCase();
+ document.querySelectorAll('[data-t]').forEach(n=>{n.textContent=t[n.dataset.t]});
+ const img=document.getElementById('demo');img.addEventListener('error',()=>{img.style.display='none';document.getElementById('fallback').style.display='flex'});
+ const ua=navigator.userAgent||'';
+ const inside=/TikTok|musical_ly|BytedanceWebview|ByteDance|aweme|FBAN|FBAV|Instagram|Messenger|Snapchat|Twitter|Pinterest|Telegram|WhatsApp|Line\//i.test(ua)||(/iP(hone|ad|od)/i.test(ua)&&/AppleWebKit/i.test(ua)&&!/Safari/i.test(ua))||(/Android/i.test(ua)&&/; wv\)/i.test(ua));
+ if(!inside){window.location.replace(dest)}
+})();
+</script>
+</body>
+</html>
